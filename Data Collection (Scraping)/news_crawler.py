@@ -14,7 +14,7 @@ for start_num in range(1, 102, 10):
     response = requests.get(URL)
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    news_list = soup.select(
+    news_list = soup.select(+
         '#main_pack > section.sc_new.sp_nnews._prs_nws > div > div.group_news > ul > li')
 
     for news in news_list:
